@@ -1,8 +1,19 @@
 ------------------------------------------------
--- NECESSARY FUNCTION, DON'T REMOVE
+-- NECESSARY FUNCTIONS, DON'T REMOVE
 ------------------------------------------------
+
 -- A global variable for the Hyper Mode
 k = hs.hotkey.modal.new({}, "F17")
+
+------------------------------------------------
+-- SYSTEM FUNCTIONALITY
+------------------------------------------------
+
+-- Start screensaver and lock computer
+k:bind({}, 'l', hs.caffeinate.startScreensaver)
+
+-- Clipboard Manager
+require "tools/clipboard"
 
 ------------------------------------------------
 -- SHOWING/HIDING APPLICATIONS
@@ -51,7 +62,6 @@ end
 -- Hyper + Left = Snap Left
 -- https://gist.github.com/spartanatreyu/850788a0441e1c5565668a35ed9a1dfc
 k:bind({}, 'Left', function()
-  hs.alert.show(hs.application.frontmostApplication():title() .. " Left", 1)
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -67,7 +77,6 @@ end)
 -- Hyper + Right = Snap Right
 -- https://gist.github.com/spartanatreyu/850788a0441e1c5565668a35ed9a1dfc
 k:bind({}, 'Right', function()
-  hs.alert.show(hs.application.frontmostApplication():title() .. " Right", 1)
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -83,7 +92,6 @@ end)
 -- Hyper + Up = Maximize
 -- https://gist.github.com/spartanatreyu/850788a0441e1c5565668a35ed9a1dfc
 k:bind({}, 'Up', function()
-  hs.alert.show(hs.application.frontmostApplication():title() .. " Full", 1)
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
