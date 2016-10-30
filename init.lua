@@ -31,6 +31,8 @@ showHide = function(bundleID)
 end
 
 -- Apps for show hide
+-- Example to get bundleID:
+-- mdls -name kMDItemCFBundleIdentifier -r Fantastical\ 2.app/
 singleapps = {
   {'a', 'com.syntevo.smartsvn'},
   {'c', 'com.apple.iChat'},
@@ -39,7 +41,7 @@ singleapps = {
   {'i', 'com.jetbrains.intellij'},
   {'k', 'com.stairways.keyboardmaestro.editor'},
   {'m', 'com.spotify.client'},
-  {'n', 'com.apple.iCal'},
+  {'n', 'com.flexibits.fantastical2.mac'},
   {'p', 'com.postmanlabs.mac'},
   {'r', 'com.apple.reminders'},
   {'s', 'com.sublimetext.2'},
